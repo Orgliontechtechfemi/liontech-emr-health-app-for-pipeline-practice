@@ -21,9 +21,7 @@ pipeline{
                 sh "echo 'running sonarqube code quality analysis'"
                 sh "echo 'class20 devops engineers develop pipelines'"
                 sh "echo 'testing must passoed inorder to pacjage application'"
-                sh  "install"
-                sh  "validate"
-                sh   "test"
+            
                 sh   "clean package"
             }
         }

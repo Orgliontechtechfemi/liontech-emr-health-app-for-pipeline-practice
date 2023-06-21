@@ -31,6 +31,7 @@ pipeline{
             steps{
                 sh  "echo 'performing codequality analysis'"
                 sh   "sonar:sonar"
+                sh  "deploy adapters: [tomcat9(credentialsId: '281a6134-9683-4bd6-939b-a0e8f5845b5a', path: '', url: 'http://localhost:8009')], contextPath: 'welcome', onFailure: false, war: 'target/*.war'"
             }
         }
 

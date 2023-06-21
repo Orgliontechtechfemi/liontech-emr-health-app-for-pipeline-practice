@@ -18,20 +18,11 @@ pipeline{
         stage('Test+build+package'){
             steps{
 
-                sh "echo 'running sonarqube code quality analysis'"
-                sh "echo 'class20 devops engineers develop pipelines'"
-                sh "echo 'testing must passoed inorder to pacjage application'"
             
                 sh   "clean package"
             }
         }
-        stage('codequality'){
-            steps{
-                sh  "echo 'performing codequality analysis'"
-                sh  "sonar:sonar"
-               
-            }
-        }
+        
 
         stage('deploy to tomcat'){
             steps{
